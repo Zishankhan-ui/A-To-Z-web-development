@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bright Home Interior</title>
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body {
+
+      margin: 0;
+
+
+      background-color: #fefefe;
+      color: #333;
+    }
+
+
+    header {
+      background-color: #ffffff;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    span img {
+      display: inline;
+      width: 300px;
+      height: 300px;
+      margin: auto;
+    }
+
+    span {
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #555;
+      text-decoration: underline double;
+      background-attachment: fixed;
+    }
+
+    .search-box {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    h2 {
+      text-align: center;
+
+    }
+
+    .search-box input {
+      width: 250px;
+      padding: 10px;
+      border: 2px solid rgb(5, 31, 146);
+      border-radius: 8px 0 0 8px;
+      outline: none;
+      margin-bottom: 40px;
+
+    }
+
+    .search-box button {
+      padding: 10px 15px;
+      background: #1e44ad;
+      color: white;
+      border: none;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+      margin-bottom: 40px;
+    }
+
+    .search-box button:hover {
+      background: #1e44ad;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+      background-size: cover;
+      background-position: center;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+    }
+
+    .content {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .content h3 {
+      color: #888;
+      margin-top: 2rem;
+    }
+
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .tip:hover {
+      background-color: #1e44ad;
+      color: #f2f2f2;
+    }
+
+    .tip {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+    }
+
+    div h2 {
+      text-align: center;
+      text-decoration: underline double;
+    }
+
+    .testimonials {
+      background: #f9f9f9;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-decoration: underline double;
+      color: #333;
+    }
+
+    .testimonial-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .section {
+      text-align: center;
+    }
+
+    .testimonial {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      transition: transform 0.3s;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .testimonial h4 {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #1e44ad;
+    }
+
+    .tip a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #f2f2f2;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .slideshow {
+      height: 400px;
+      width: 400px;
+      position: relative;
+      max-width: 400px;
+      height: relative;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      float: right;
+      display: flex;
+      margin-right: 250px;
+      margin: 10px;
+
+    }
+
+    .slideshow img {
+
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      animation: slide 25s infinite;
+      right: 0;
+
+
+    }
+
+
+
+    .slideshow img:nth-child(2) {
+      animation-delay: 5s;
+    }
+
+    .slideshow img:nth-child(3) {
+      animation-delay: 10s;
+    }
+
+    .slideshow img:nth-child(4) {
+      animation-delay: 15s;
+    }
+
+    .slideshow img:nth-child(5) {
+      animation-delay: 20s;
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+      }
+
+      5% {
+        opacity: 1;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      25% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .animate {
+      width: 400px;
+      height: 400px;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+    }
+
+    .animate video {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+
+    .products {
+      padding: 40px 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      background: #fafafa;
+      border-radius: 6px;
+    }
+
+    .product img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .booking,
+    .contact,
+    .admin {
+      padding: 40px 20px;
+    }
+
+    .booking form input,
+    .booking form button {
+      display: block;
+      width: 40%;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    section input {
+      display: flex;
+      width: 40%;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    section input button {
+      display: flex;
+      width: 40%;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    section input .log {
+      width: 100px;
+      height: auto;
+      background-color: #1e44ad;
+    }
+
+    section input .name {
+      width: 100px;
+      height: auto;
+      background-color: #1e44ad;
+
+    }
+
+    section input .done {
+      width: 100px;
+      height: auto;
+      background-color: #1e44ad;
+    }
+
+    .cart {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 40%;
+      height: 100%;
+      background: #fff;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .btn7 {
+      width: 80px;
+      border: 2px solid #1e44ad;
+      border-radius: 7px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #1e44ad;
+      color: white;
+    }
+
+    .cart.active {
+      right: 400px;
+    }
+
+    .cart ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .cart ul li {
+      margin: 10px 0;
+    }
+
+    @media (max-width: 92px) {}
+
+    @media (max-width: 992px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+        padding: 0 10px;
+      }
+
+      .search-box {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .search-box input {
+        border-radius: 8px;
+        margin-bottom: 10px;
+        width: 90%;
+        max-width: 400px;
+      }
+
+      .search-box button {
+        border-radius: 8px;
+        width: 90%;
+      }
+
+      body {
+        margin: auto;
+        padding: 100px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav .links {
+        display: none;
+        flex-direction: column;
+        background: #1e44ad;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+      }
+
+      nav .links.show {
+        display: flex;
+      }
+
+      nav .menu-toggle {
+        display: block;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .tips {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      body {
+        margin: auto;
+        padding: 100px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero {
+        height: 40vh;
+      }
+
+      body {
+        margin: auto;
+        padding: 100px;
+      }
+
+      .gallery img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      iframe {
+        width: 100% !important;
+        height: 250px !important;
+      }
+
+      span img {
+
+        grid-template-columns: 1fr;
+
+      }
+
+    }
+
+    @media screen and (max-width:1145px) {
+      .tips {
+        grid-template-columns: 1fr;
+      }
+
+      body {
+        margin: auto;
+        padding: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+ <b> <nav style="background:#1e44ad; padding:10px; text-align:center; position:sticky; top:0; z-index:1000;">
+   <a href="home.html" target="_blank" style="color:white; margin:0 15px; text-decoration:none;">Home</a>
+  <a href="Produts.html" target="_blank" style="color:white; margin:0 15px; text-decoration:none;">Products</a>
+  <a href="Services.html" target="_blank" style="color:white; margin:0 15px; text-decoration:none;">Services</a>
+  <a href="gallery.html" target="_blank" style="color:white; margin:0 15px; text-decoration:none;">Gallery</a>
+  <a href="contact.html" target="_blank" style="color:white; margin:0 15px; text-decoration:none;">Contact</a>
+  </nav>
+ </b>
+  <header>
+    <h1>Bright Home Interior</h1>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search on this page...">
+    <button onclick="searchSite()">🔍</button>
+  </div>
+
+
+  <section class="hero">
+    <h2>Light. Airy. Beautiful.</h2>
+  </section>
+  <div class="pic">
+
+  </div>
+  <section class="content">
+    <h3>Tips for a Brighter Space</h3>
+    <div class="tips">
+      <div class="tip"><a href="amaan.html">Buy curtain here and we have free installation.</a></div>
+      <div class="tip"><a href="saniya.html">Buy wallpaper and we have free installation.</a></div>
+      <div class="tip"><a href="LIGHT.HTML">Buy Light here and we have free installation.</a></div>
+      <div class="tip"><a href="Zishan.html">Buy pannels here and we have free installation.</a></div>
+      <div class="tip"><a href="ipvc.html">buy pvc and we have free installation.</a></div>
+      <div class="tip">we have more Interior itom like this.</div>
+    </div>
+  </section>
+  <section id="booking" class="booking">
+    <h2>Book a Consultation</h2>
+    <form id="bookingForm">
+      <p id="bookingMsg">booking form</p>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="date" required>
+      <button type="submit">Book Now</button>
+    </form>
+
+  </section>
+
+
+
+
+  <h2>Admin Panel</h2>
+
+  <h3>Add Product</h3>
+  <section id="admin" class="admin">
+    <input type="password" id="adminPass" placeholder="Enter password">
+
+    <input type="text" id="newName" placeholder="product name">
+
+    <input type="number" id="newPrice" placeholder="Price">
+
+    <div class="btn7">
+      submit
+    </div>
+  </section>
+
+  <div class="pic">
+    <h2>These are the some picture of our products:-</h2>
+  </div>
+  <span>
+    <img src="curtain8.JPEG" alt="curtain">
+    <img src="light1.JPEG" alt="Light">
+    <img src="pannels.JPEG" alt="pannels">
+  </span>
+  <span>
+    <img src="paper.JPEG" alt="paper">
+    <img src="pvc2.JPEG" alt="pvc">
+    <img src="pvc3.JPEG" alt="pvc">
+  </span>
+  <span>
+    <img src="pvc4.JPEG" alt="pvc">
+    <img src="pvc5.JPEG" alt="pvc">
+  </span>
+  <span class="slideshow">
+
+
+    <img src="https://images.pexels.com/photos/1571452/pexels-photo-1571452.jpeg" alt="Interior 2">
+    <img src="https://images.pexels.com/photos/271743/pexels-photo-271743.jpeg" alt="Interior 3">
+    <img src="https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg" alt="Interior 4">
+    <img src="https://images.pexels.com/photos/1571459/pexels-photo-1571459.jpeg" alt="Interior 5">
+  </span>
+
+  <span class="animate">
+    <video src="https://v.ftcdn.net/03/91/61/58/700_F_391615898_N55yF8RM71wv9Kwvv7K7s1UeAKG6eoKs_ST.mp4" autoplay loop
+      muted width="500px" height="500px"></video>
+  </span>
+  <div id="product-gallery"></div>
+  <script src="products.js"></script>
+
+  <section class="testimonials" id="testimonials">
+    <h2>⭐ What Our Clients Say</h2>
+    <div class="testimonial-container">
+
+      <div class="testimonial">
+        <p>"Bright Home Interior changed my living room completely. The curtains and wall panels gave a premium look.
+          Very happy!"</p>
+        <h4>- Sneha Gupta, fatehpur</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>"I bought wallpaper and lights from here. Free installation was quick and professional. My home feels brand
+          new now."</p>
+        <h4>- Rajesh Verma, Sikar</h4>
+      </div>
+
+      <div class="testimonial">
+        <p>"Excellent service and reasonable prices. They designed my office interior beautifully. Highly recommended!"
+        </p>
+        <h4>- Anjali Mehta, beswa</h4>
+      </div>
+
+    </div>
+  </section>
+
+  <span>
+    <h2>We have more item like this.</h2>
+    <h2>Please visit our shop.</h2>
+    <h2>Bright home interior</h2>
+    <h2>Bhati mension building Bjaj road,sikar</h2>
+    <h2>Owner=Mr.Irshad khan(kirdoli)</h2>
+    <h2>Contact us on:7426071340
+    </h2>
+    <h2 style="text-align:center; margin-top:40px;">📍 Visit Our Shop</h2>
+    <div style="display:flex; justify-content:center; margin:20px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14251.0!2d75.1511!3d27.62645!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6a7a7f3e6e3%3A0x9c0e8f8b6bb0c0c3!2sBhati%20Mansion%2C%20Bajaj%20Road%2C%20Sikar%2C%20Rajasthan%2C%20India!5e0!3m2!1sen!2sin!4v169#######"
+        width="600" height="400" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </span>
+  <h2>
+    <a href="https://wa.me/917426071340" target="_blank" style="background:linear-gradient(greenyellow,violet,#bc1888, #dc2743,#e6683c);
+          color:white; 
+          padding:10px 20px; 
+          border-radius:8px; 
+          text-decoration:none; 
+          font-family:Arial, sans-serif;">
+      💬 Chat on WhatsApp
+    </a>
+
+  </h2>
+  <h2>
+    <a href="https://instagram.com/manwar.khan.7" target="_blank" style="background:linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+          color:white; padding:10px 20px; border-radius:8px; 
+          text-decoration:none; font-family:Arial, sans-serif;">
+      📷 Follow me on Instagram
+    </a>
+
+  </h2>
+  </span>
+  <footer>
+    &copy; 2025 Bright Interiors. All rights reserved.
+  </footer>
+  <script>
+    (function () {
+      const $ = (id) => document.getElementById(id);
+
+      alert("Welcome To Bright Home Interior");
+
+      /* ---------- Search on page ---------- */
+      window.searchSite = function () {
+        const input = ($("searchInput")?.value || "").trim().toLowerCase();
+        if (!input) return alert("Type something to search.");
+        const elements = document.body.getElementsByTagName("*");
+        let foundEl = null;
+
+        for (let i = 0; i < elements.length; i++) {
+          const text = (elements[i].innerText || elements[i].textContent || "").toLowerCase();
+          if (text.includes(input)) {
+            foundEl = elements[i];
+            break;
+          }
+        }
+
+        if (foundEl) {
+          foundEl.scrollIntoView({ behavior: "smooth", block: "center" });
+          const prevBg = foundEl.style.backgroundColor;
+          foundEl.style.transition = "background-color .4s";
+          foundEl.style.backgroundColor = "yellow";
+          setTimeout(() => (foundEl.style.backgroundColor = prevBg), 800);
+        } else {
+          alert("No results found on this page.");
+        }
+      };
+
+      /* ---------- Booking form ---------- */
+      (function initBooking() {
+        const form = $("bookingForm");
+        if (!form) return;
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const msg = $("bookingMsg");
+          if (msg) msg.textContent = "Booking confirmed! We'll contact you soon.";
+          form.reset();
+        });
+      })();
+
+      /* ---------- Ensure Products grid exists after animate ---------- */
+      function ensureProductsGrid() {
+        let productList = $("productList");
+        if (!productList) {
+          const animateEl = document.querySelector(".animate");
+          const productsSection = document.createElement("section");
+          productsSection.className = "products";
+          productsSection.innerHTML = `
+          <h2 style="text-align:center; margin-bottom:16px; text-decoration:underline double;">Our Products</h2>
+          <div id="productList" class="product-grid"></div>
+        `;
+          // Insert right AFTER animate section
+          if (animateEl && animateEl.parentNode) {
+            animateEl.parentNode.insertBefore(productsSection, animateEl.nextSibling);
+          } else {
+            document.body.appendChild(productsSection);
+          }
+          productList = $("productList");
+        }
+        return productList;
+      }
+
+      /* ---------- Ensure Cart UI exists ---------- */
+      function ensureCartUI() {
+        let cartSidebar = $("cartSidebar");
+        if (!cartSidebar) {
+          cartSidebar = document.createElement("div");
+          cartSidebar.className = "cart";
+          cartSidebar.id = "cartSidebar";
+          cartSidebar.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+            <h3 style="margin:0;">Your Cart</h3>
+            <button id="closeCart" title="Close">✖</button>
+          </div>
+          <ul id="cartItems"></ul>
+          <p id="cartTotal" style="font-weight:bold; margin-top:10px;">Total: ₹0</p>
+          <button id="checkoutBtn" style="margin-top:10px;">Checkout (COD)</button>
+          <button id="payBtn" style="margin-top:10px;background:#0a7;color:#fff;padding:8px 12px;border:none;border-radius:6px;cursor:pointer;">Pay Online</button>
+        `;
+          document.body.appendChild(cartSidebar);
+        }
+
+        let cartBtn = $("cartBtn");
+        if (!cartBtn) {
+          cartBtn = document.createElement("button");
+          cartBtn.id = "cartBtn";
+          cartBtn.className = "btn7";
+          cartBtn.textContent = "Cart (0)";
+          cartBtn.style.position = "fixed";
+          cartBtn.style.bottom = "20px";
+          cartBtn.style.right = "20px";
+          cartBtn.style.zIndex = "1001";
+          document.body.appendChild(cartBtn);
+        }
+
+        const closeBtn = $("closeCart");
+        if (cartBtn) {
+          cartBtn.onclick = () => cartSidebar.classList.add("active");
+        }
+        if (closeBtn) {
+          closeBtn.onclick = () => cartSidebar.classList.remove("active");
+        }
+
+        return {
+          cartSidebar,
+          cartItems: $("cartItems"),
+          cartTotal: $("cartTotal"),
+          cartBtn,
+          checkoutBtn: $("checkoutBtn"),
+          payBtn: $("payBtn"),
+        };
+      }
+
+      /* ---------- Product Data (your images) ---------- */
+      const products = [
+        { name: "PVC Works", price: 15000, img: "pvc2.JPEG" },
+        { name: "Panels", price: 5000, img: "pannels.JPEG" },
+        { name: "Curtains", price: 8000, img: "curtain8.JPEG" }
+      ];
+
+      const cart = [];
+      const productListEl = ensureProductsGrid();
+      const cartUI = ensureCartUI();
+
+      function formatINR(n) {
+        return "₹" + Number(n || 0).toLocaleString("en-IN");
+      }
+
+      function loadProducts() {
+        if (!productListEl) return;
+        productListEl.innerHTML = products
+          .map(
+            (p, i) => `
+          <div class="product">
+            <img src="${p.img}" alt="${p.name}">
+            <h3>${p.name}</h3>
+            <p>${formatINR(p.price)}</p>
+            <button onclick="addToCart(${i})">Add to Cart</button>
+          </div>
+        `
+          )
+          .join("");
+      }
+
+      /* Expose addToCart globally */
+      window.addToCart = function (index) {
+        const item = products[index];
+        if (!item) return;
+        cart.push(item);
+        updateCart();
+      };
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCart();
+      }
+
+      function updateCart() {
+        if (!cartUI.cartItems || !cartUI.cartTotal || !cartUI.cartBtn) return;
+        cartUI.cartItems.innerHTML = cart
+          .map(
+            (item, i) => `
+          <li style="display:flex;justify-content:space-between;gap:10px;align-items:center;">
+            <span>${item.name} – ${formatINR(item.price)}</span>
+            <button data-remove="${i}" title="Remove">X</button>
+          </li>`
+          )
+          .join("");
+
+        const total = cart.reduce((sum, it) => sum + (it.price || 0), 0);
+        cartUI.cartTotal.textContent = "Total: " + formatINR(total);
+        cartUI.cartBtn.textContent = `Cart (${cart.length})`;
+
+        cartUI.cartItems.querySelectorAll("button[data-remove]").forEach((btn) => {
+          btn.onclick = () => removeFromCart(parseInt(btn.getAttribute("data-remove"), 10));
+        });
+      }
+
+      /* ---------- Checkout ---------- */
+      if (cartUI.checkoutBtn) {
+        cartUI.checkoutBtn.onclick = () => {
+          if (!cart.length) return alert("Your cart is empty.");
+          alert("Order placed successfully! (Cash on Delivery)");
+          cart.length = 0;
+          updateCart();
+          cartUI.cartSidebar.classList.remove("active");
+        };
+      }
+
+      /* ---------- Online Payment (Demo) ---------- */
+      if (cartUI.payBtn) {
+        cartUI.payBtn.onclick = () => {
+          if (!cart.length) return alert("Your cart is empty.");
+          const total = cart.reduce((sum, it) => sum + (it.price || 0), 0);
+
+          alert("Redirecting to Payment Gateway...\nTotal: " + formatINR(total));
+          // Demo: integrate Razorpay/Stripe/PayPal here
+
+          cart.length = 0;
+          updateCart();
+          cartUI.cartSidebar.classList.remove("active");
+        };
+      }
+
+      /* ---------- Admin add product ---------- */
+      function initAdmin() {
+        const pass = $("adminPass");
+        const name = $("newName");
+        const price = $("newPrice");
+        const adminSection = document.querySelector("#admin");
+        const submitBtn = adminSection ? adminSection.querySelector(".btn7") : null;
+
+        if (!(pass && name && price && submitBtn)) return;
+
+        submitBtn.addEventListener("click", function () {
+          const pwd = (pass.value || "").trim();
+          if (pwd !== "admin123") return alert("Wrong password");
+
+          const pname = (name.value || "").trim();
+          const pprice = parseInt(price.value, 10);
+
+          if (!pname || isNaN(pprice) || pprice <= 0) {
+            return alert("Enter a valid product name and price.");
+          }
+
+          products.push({
+            name: pname,
+            price: pprice,
+            img: "pvc3.JPEG", // default new product image
+          });
+
+          loadProducts();
+          alert("Product added!");
+          name.value = "";
+          price.value = "";
+        });
+      }
+
+      /* ---------- Initialize ---------- */
+      loadProducts();
+      updateCart();
+      initAdmin();
+    })();
+
+
+  </script>
+</body>
+
+
+</html>
