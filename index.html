@@ -397,122 +397,200 @@
       margin: 10px 0;
     }
 
-    @media (max-width: 92px) {}
+   
+      
+     
+       
+       
+    
+     
+      /* ===============================
+   GLOBAL RESPONSIVE FIXES
+================================ */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
 
-    @media (max-width: 992px) {
-      header h1 {
-        font-size: 2rem;
-      }
+span {
+  display: block;
+}
 
-      .hero h2 {
-        font-size: 2rem;
-        padding: 0 10px;
-      }
+body {
+  overflow-x: hidden;
+}
 
-      .search-box {
-        flex-direction: column;
-        align-items: center;
-      }
+/* ===============================
+   LARGE DESKTOP (1200px+)
+================================ */
+@media (min-width: 1200px) {
+  .content,
+  .products,
+  .testimonials {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
 
-      .search-box input {
-        border-radius: 8px;
-        margin-bottom: 10px;
-        width: 90%;
-        max-width: 400px;
-      }
+/* ===============================
+   LAPTOP (992px – 1199px)
+================================ */
+@media (max-width: 1199px) {
+  .slideshow {
+    float: none;
+    margin: 30px auto;
+  }
 
-      .search-box button {
-        border-radius: 8px;
-        width: 90%;
-      }
+  body {
+    padding: 0;
+  }
+}
 
-      body {
-        margin: auto;
-        padding: 100px;
-      }
-    }
+/* ===============================
+   TABLET (768px – 991px)
+================================ */
+@media (max-width: 991px) {
+  header h1 {
+    font-size: 2rem;
+  }
 
-    @media (max-width: 768px) {
-      nav .links {
-        display: none;
-        flex-direction: column;
-        background: #1e44ad;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 200px;
-        padding: 10px;
-      }
+  .hero {
+    height: 45vh;
+  }
 
-      nav .links.show {
-        display: flex;
-      }
+  .hero h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
 
-      nav .menu-toggle {
-        display: block;
-      }
+  .tips {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-      .hero h2 {
-        font-size: 1.5rem;
-      }
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .tips {
-        grid-template-columns: 1fr;
-      }
+  .booking form input,
+  .booking form button,
+  section input {
+    width: 80%;
+  }
 
-      .testimonial-container {
-        flex-direction: column;
-        align-items: center;
-      }
+  .cart {
+    width: 80%;
+  }
 
-      body {
-        margin: auto;
-        padding: 100px;
-      }
-    }
+  .cart.active {
+    right: 0;
+  }
+}
 
-    @media (max-width: 576px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
+/* ===============================
+   MOBILE (max-width: 767px)
+================================ */
+@media (max-width: 767px) {
 
-      .hero {
-        height: 40vh;
-      }
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
 
-      body {
-        margin: auto;
-        padding: 100px;
-      }
+  header h1 {
+    font-size: 1.6rem;
+  }
 
-      .gallery img {
-        max-width: 100%;
-        height: auto;
-      }
+  .hero {
+    height: 35vh;
+  }
 
-      iframe {
-        width: 100% !important;
-        height: 250px !important;
-      }
+  .hero h2 {
+    font-size: 1.4rem;
+  }
 
-      span img {
+  .search-box {
+    flex-direction: column;
+  }
 
-        grid-template-columns: 1fr;
+  .search-box input,
+  .search-box button {
+    width: 90%;
+  }
 
-      }
+  .tips {
+    grid-template-columns: 1fr;
+  }
 
-    }
+  span img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
 
-    @media screen and (max-width:1145px) {
-      .tips {
-        grid-template-columns: 1fr;
-      }
+  .slideshow {
+    width: 90%;
+    height: 280px;
+  }
 
-      body {
-        margin: auto;
-        padding: 100px;
-      }
-    }
+  .slideshow img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .animate {
+    width: 90%;
+    height: auto;
+  }
+
+  .animate video {
+    width: 100%;
+    height: auto;
+  }
+
+  .booking form input,
+  .booking form button,
+  section input {
+    width: 90%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .cart {
+    width: 100%;
+  }
+
+  .cart.active {
+    right: 0;
+  }
+
+  .btn7 {
+    width: 100px;
+    font-size: 14px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL MOBILE (≤ 480px)
+================================ */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+    
   </style>
 </head>
 
@@ -933,3 +1011,4 @@
 
 
 </html>
+
